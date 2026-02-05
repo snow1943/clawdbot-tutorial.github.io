@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clawdbot教程 - 从零搭建你的AI助手</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-robot"></i>
+                <span>Clawdbot</span>
+                <span class="badge">教程站</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#intro" class="active">是什么</a></li>
+                <li><a href="#why">为什么</a></li>
+                <li><a href="#install">安装</a></li>
+                <li><a href="#platform">平台</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="https://github.com/clawdbot/clawdbot" target="_blank" class="btn btn-outline">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="#install" class="btn btn-primary">开始搭建</a>
+            </div>
+            <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="intro" class="hero">
+        <div class="hero-bg">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="pulse"></span>
+                    开源免费 · 保姆级教程
+                </div>
+                <h1>从零搭建你的<br><span class="gradient-text">AI 助手</span></h1>
+                <p class="hero-subtitle">
+                    Clawdbot 是一个开源的 AI 助手框架，你可以把它部署在自己的服务器上，
+                    接入微信、Telegram、飞书等平台，打造专属的智能助手。
+                </p>
+                <div class="hero-tags">
+                    <span><i class="fas fa-check"></i> 完全开源免费</span>
+                    <span><i class="fas fa-check"></i> 数据本地存储</span>
+                    <span><i class="fas fa-check"></i> 50+平台支持</span>
+                </div>
+                <div class="hero-actions">
+                    <a href="#install" class="btn btn-primary btn-lg">
+                        <i class="fas fa-rocket"></i> 开始搭建
+                    </a>
+                    <a href="#why" class="btn btn-glass btn-lg">
+                        <i class="fas fa-arrow-right"></i>了解更多
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="device-mockup">
+                    <div class="device-frame">
+                        <div class="device-screen">
+                            <div class="chat-demo">
+                                <div class="chat-message bot">
+                                    <div class="avatar">🤖</div>
+                                    <div class="message-content">
+                                        <p>你好！我是你的Clawdbot助手～ 有什么可以帮你的吗？😊</p>
+                                        <span class="time">现在</span>
+                                    </div>
+                                </div>
+                                <div class="chat-message user">
+                                    <div class="avatar">👤</div>
+                                    <div class="message-content">
+                                        <p>帮我查一下今天的天气</p>
+                                        <span class="time">刚刚</span>
+                                    </div>
+                                </div>
+                                <div class="chat-message bot">
+                                    <div class="avatar">🤖</div>
+                                    <div class="message-content">
+                                        <p>🌤️ 今天北京天气晴朗，15-28°C，空气质量优良。适合外出哦！</p>
+                                        <span class="time">刚刚</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="floating-cards">
+                        <div class="float-card card-1">
+                            <i class="fab fa-weixin"></i>
+                            <span>微信</span>
+                        </div>
+                        <div class="float-card card-2">
+                            <i class="fab fa-telegram"></i>
+                            <span>Telegram</span>
+                        </div>
+                        <div class="float-card card-3">
+                            <i class="fab fa-slack"></i>
+                            <span>Slack</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Section -->
+    <section id="why" class="why-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">为什么选择</span>
+                <h2>为什么要用 Clawdbot？</h2>
+                <p>相比直接用 ChatGPT 网页版，Clawdbot 有这些优势 👇</p>
+            </div>
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>数据更安全</h3>
+                    <p>所有数据都存在你自己的服务器上，不经过第三方，隐私有保障。</p>
+                    <div class="why-tip">💡 对隐私敏感的同学必备</div>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i class="fas fa-plug"></i>
+                    </div>
+                    <h3>多平台接入</h3>
+                    <p>可以用微信、Telegram、飞书等日常软件和 AI 对话，不用切换 App。</p>
+                    <div class="why-tip">💡 微信就能用，超方便！</div>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>多模型切换</h3>
+                    <p>Claude、GPT、DeepSeek...随时切换，哪个便宜用哪个。</p>
+                    <div class="why-tip">💡 告别单一供应商依赖</div>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>插件扩展</h3>
+                    <p>丰富的插件生态，可以实现天气查询、股票行情、定时提醒等功能。</p>
+                    <div class="why-tip">💡 50+插件可选</div>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    <h3>成本可控</h3>
+                    <p>只需支付服务器费用，AI API 调用费用直接对接官方，无中间商赚差价。</p>
+                    <div class="why-tip">💡 月均成本可低至几十元</div>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>社群活跃</h3>
+                    <p>开源社区活跃，遇到问题有人帮忙解决，插件持续更新。</p>
+                    <div class="why-tip">💡 不怕没人管</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Install Section -->
+    <section id="install" class="installation">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">安装教程</span>
+                <h2>选择适合你的方式</h2>
+                <p>不管你用什么设备，总有一种方式适合你 👇</p>
+            </div>
+
+            <!-- Step 0: Prerequisites -->
+            <div class="prerequisites">
+                <h3><i class="fas fa-clipboard-check"></i> 安装前准备</h3>
+                <div class="prereq-grid">
+                    <div class="prereq-item">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub 账号</span>
+                    </div>
+                    <div class="prereq-item">
+                        <i class="fas fa-cloud"></i>
+                        <span>云服务器（或本地电脑）</span>
+                    </div>
+                    <div class="prereq-item">
+                        <i class="fab fa-node-js"></i>
+                        <span>Node.js 18+</span>
+                    </div>
+                    <div class="prereq-item">
+                        <i class="fas fa-key"></i>
+                        <span>AI API Key（可选）</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 安装方式Tabs -->
+            <div class="install-tabs">
+                <button class="tab-btn active" data-tab="local">💻 本地电脑</button>
+                <button class="tab-btn" data-tab="docker">🐳 Docker</button>
+                <button class="tab-btn" data-tab="cloud">☁️ 云服务器</button>
+                <button class="tab-btn" data-tab="cloud-native">☸️ Kubernetes</button>
+            </div>
+
+            <div class="tab-contents">
+                <!-- 本地安装 -->
+                <div class="tab-content active" id="local">
+                    <div class="install-guide">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>安装 Node.js（如果没有）</h4>
+                                <p class="step-desc">Clawdbot 需要 Node.js 运行环境，请根据你的系统选择安装方式：</p>
+                                
+                                <div class="sub-steps">
+                                    <div class="sub-step">
+                                        <h5>🍎 Mac 用户</h5>
+                                        <div class="code-block">
+                                            <pre><code># 方式一：使用 Homebrew（推荐）
+brew install node
+
+# 方式二：直接下载安装包
+# 访问 https://nodejs.org 下载 LTS 版本</code></pre>
+                                        </div>
+                                    </div>
+                                    <div class="sub-step">
+                                        <h5>🪟 Windows 用户</h5>
+                                        <div class="code-block">
+                                            <pre><code># 直接下载安装包
+# 访问 https://nodejs.org 下载 LTS 版本
+# 一路 Next 即可，记得勾选 "Add to PATH"</code></pre>
+                                        </div>
+                                    </div>
+                                    <div class="sub-step">
+                                        <h5>🐧 Linux 用户</h5>
+                                        <div class="code-block">
+                                            <pre><code># 使用包管理器
+# Ubuntu/Debian:
+sudo apt update
+sudo apt install nodejs npm
+
+# 或者使用 nvm（推荐，管理多版本更方便）
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+nvm install --lts</code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="verify-box">
+                                    <h5>✅ 验证安装</h5>
+                                    <div class="code-block">
+                                        <pre><code>node -v   # 应该显示 v18.x.x 或更高
+npm -v    # 应该显示版本号</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>克隆项目到本地</h4>
+                                <div class="code-block">
+                                    <pre><code># 创建工作目录
+mkdir -p ~/clawdbot && cd ~/clawdbot
+
+# 克隆项目
+git clone https://github.com/clawdbot/clawdbot.git .
+
+# 切换到最新版本
+git checkout main</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>安装依赖</h4>
+                                <div class="code-block">
+                                    <pre><code># 使用 pnpm（更快）
+npm install -g pnpm
+pnpm install
+
+# 或者使用 npm
+npm install</code></pre>
+                                </div>
+                                <div class="tip-box">
+                                    <i class="fas fa-lightbulb"></i>
+                                    <span>💡 首次安装可能需要几分钟，耐心等待...</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h4>初始化配置</h4>
+                                <div class="code-block">
+                                    <pre><code># 复制配置文件
+cp config.example.yaml config.yaml
+
+# 编辑配置文件（用你喜欢的编辑器）
+nano config.yaml
+
+# 或使用可视化配置（推荐新手）
+npm run setup</code></pre>
+                                </div>
+                                <div class="tip-box">
+                                    <i class="fas fa-info-circle"></i>
+                                    <span>📝 主要配置项：AI API Key、监听端口、启用哪些平台</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">5</div>
+                            <div class="step-content">
+                                <h4>启动服务</h4>
+                                <div class="code-block">
+                                    <pre><code># 开发模式启动（支持热重载，改代码后自动重启）
+npm run dev
+
+# 生产模式启动
+npm run build
+npm start
+
+# 🎉 看到 "Server started on http://localhost:3000" 就说明成功了！</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">6</div>
+                            <div class="step-content">
+                                <h4>访问管理后台</h4>
+                                <p class="step-desc">打开浏览器访问 <code>http://localhost:3000</code>，完成初始化配置。</p>
+                                <div class="success-box">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>🎉 恭喜！你已经成功搭建了 Clawdbot！接下来去配置平台接入吧。</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Docker安装 -->
+                <div class="tab-content" id="docker">
+                    <div class="install-guide">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>安装 Docker（如未安装）</h4>
+                                <div class="code-block">
+                                    <pre><code># Mac/Windows: 直接下载 Docker Desktop
+# https://www.docker.com/products/docker-desktop/
+
+# Linux (Ubuntu):
+curl -fsSL https://get.docker.com | sh
+sudo usermod -aG docker $USER
+
+# 验证安装
+docker --version  # 应显示 20.x.x 或更高</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>创建配置目录</h4>
+                                <div class="code-block">
+                                    <pre><code># 创建数据目录
+mkdir -p ~/clawdbot/{data,config}
+
+# 进入目录
+cd ~/clawdbot</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>创建配置文件</h4>
+                                <p class="step-desc">创建 <code>config.yaml</code> 文件，配置你的 AI API Key 等参数：</p>
+                                <div class="code-block">
+                                    <pre><code>cat > config.yaml << 'EOF'
+# Clawdbot 配置文件
+server:
+  host: "0.0.0.0"
+  port: 3000
+
+ai:
+  provider: "openai"  # 可选: openai, anthropic, deepseek
+  api_key: "你的API_KEY"
+
+plugins:
+  enabled:
+    - weather
+    - news
+    - crypto
+EOF</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h4>启动容器</h4>
+                                <div class="code-block">
+                                    <pre><code># 启动 Clawdbot
+docker run -d \
+  --name clawdbot \
+  -p 3000:3000 \
+  -v $(pwd)/data:/app/data \
+  -v $(pwd)/config:/app/config \
+  -e NODE_ENV=production \
+  clawdbot/clawdbot:latest
+
+# 查看日志
+docker logs -f clawdbot
+
+# 🎉 访问 http://localhost:3000</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">5</div>
+                            <div class="step-content">
+                                <h4>更新版本</h4>
+                                <div class="code-block">
+                                    <pre><code># 更新到最新版本
+docker pull clawdbot/clawdbot:latest
+docker restart clawdbot</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 云服务器安装 -->
+                <div class="tab-content" id="cloud">
+                    <div class="cloud-intro">
+                        <p>在云服务器上部署是最常用的方式，适合需要长期稳定运行的同学。</p>
+                    </div>
+                    
+                    <div class="cloud-options">
+                        <div class="cloud-card" data-provider="tencent">
+                            <div class="cloud-header">
+                                <i class="fab fa-cloudversify"></i>
+                                <h4>腾讯云</h4>
+                            </div>
+                            <div class="cloud-recommend">
+                                <span>💰 新用户最低 99元/年</span>
+                            </div>
+                            <div class="code-block">
+                                <pre><code># SSH 连接到服务器
+ssh root@你的服务器IP
+
+# 一键安装脚本
+curl -sSL https://get.clawd.bot/tencent | bash
+
+# 或手动安装
+wget -O install.sh https://get.clawd.bot/install.sh
+chmod +x install.sh
+./install.sh</code></pre>
+                            </div>
+                        </div>
+
+                        <div class="cloud-card" data-provider="aliyun">
+                            <div class="cloud-header">
+                                <i class="fab fa-alipay"></i>
+                                <h4>阿里云</h4>
+                            </div>
+                            <div class="cloud-recommend">
+                                <span>💰 学生机 9.9元/月</span>
+                            </div>
+                            <div class="code-block">
+                                <pre><code># SSH 连接到服务器
+ssh root@你的服务器IP
+
+# 一键安装
+curl -sSL https://get.clawd.bot/aliyun | bash
+
+# 或使用 Docker 部署
+docker run -d \
+  -p 3000:3000 \
+  -v /opt/clawdbot/data:/app/data \
+  clawdbot/clawdbot:latest</code></pre>
+                            </div>
+                        </div>
+
+                        <div class="cloud-card" data-provider="volcengine">
+                            <div class="cloud-header">
+                                <i class="fas fa-mountain"></i>
+                                <h4>火山引擎</h4>
+                            </div>
+                            <div class="cloud-recommend">
+                                <span>💰 新用户有优惠</span>
+                            </div>
+                            <div class="code-block">
+                                <pre><code># SSH 连接
+ssh root@你的服务器IP
+
+# Docker Compose 方式
+mkdir -p /opt/clawdbot
+cd /opt/clawdbot
+
+cat > docker-compose.yml << 'EOF'
+version: '3.8'
+services:
+  clawdbot:
+    image: clawdbot/clawdbot:latest
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./data:/app/data
+EOF
+
+docker compose up -d</code></pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="server-tips">
+                        <h4><i class="fas fa-server"></i> 服务器配置建议</h4>
+                        <table class="config-table">
+                            <thead>
+                                <tr>
+                                    <th>使用场景</th>
+                                    <th>推荐配置</th>
+                                    <th>预估费用</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>个人试用</td>
+                                    <td>1核 2GB</td>
+                                    <td>50-100元/月</td>
+                                </tr>
+                                <tr>
+                                    <td>日常使用</td>
+                                    <td>2核 4GB</td>
+                                    <td>100-200元/月</td>
+                                </tr>
+                                <tr>
+                                    <td>多人共用</td>
+                                    <td>4核 8GB</td>
+                                    <td>200-400元/月</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Kubernetes -->
+                <div class="tab-content" id="cloud-native">
+                    <div class="install-guide">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>使用 Helm 部署</h4>
+                                <div class="code-block">
+                                    <pre><code># 添加 Helm 仓库
+helm repo add clawdbot https://charts.clawd.bot
+helm repo update
+
+# 安装 Clawdbot
+helm install clawdbot clawdbot/clawdbot \
+  --namespace clawdbot \
+  --create-namespace \
+  --set replicaCount=2 \
+  --set service.type=LoadBalancer</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>配置示例</h4>
+                                <div class="code-block">
+                                    <pre><code># values.yaml 配置示例
+replicaCount: 2
+
+image:
+  repository: clawdbot/clawdbot
+  tag: latest
+
+service:
+  type: LoadBalancer
+  port: 3000
+
+ingress:
+  enabled: true
+  hosts:
+    - host: clawdbot.example.com
+      paths:
+        - path: /
+          pathType: Prefix
+
+resources:
+  requests:
+    cpu: 500m
+    memory: 512Mi
+  limits:
+    cpu: 2000m
+    memory: 2Gi</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Platform Section -->
+    <section id="platform" class="platform-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">平台接入</span>
+                <h2>接入你的聊天软件</h2>
+                <p>把 AI 助手接入你常用的聊天工具 👇</p>
+            </div>
+
+            <div class="platform-grid">
+                <div class="platform-card">
+                    <div class="platform-icon weixin">
+                        <i class="fab fa-weixin"></i>
+                    </div>
+                    <h3>微信</h3>
+                    <p>需要企业认证订阅号或服务号，个人订阅号不支持</p>
+                    <div class="platform-status">
+                        <span class="status-tag need-auth">需认证</span>
+                    </div>
+                </div>
+
+                <div class="platform-card">
+                    <div class="platform-icon telegram">
+                        <i class="fab fa-telegram"></i>
+                    </div>
+                    <h3>Telegram</h3>
+                    <p>申请 Bot Token，配置 Webhook 即可使用</p>
+                    <div class="platform-status">
+                        <span class="status-tag free">免费</span>
+                    </div>
+                </div>
+
+                <div class="platform-card">
+                    <div class="platform-icon feishu">
+                        <i class="fab fa-rocketchat"></i>
+                    </div>
+                    <h3>飞书</h3>
+                    <p>创建企业应用，配置 App ID 和 App Secret</p>
+                    <div class="platform-status">
+                        <span class="status-tag free">免费</span>
+                    </div>
+                </div>
+
+                <div class="platform-card">
+                    <div class="platform-icon slack">
+                        <i class="fab fa-slack"></i>
+                    </div>
+                    <h3>Slack</h3>
+                    <p>创建 Slack App，配置 Bot Token 和 Events</p>
+                    <div class="platform-status">
+                        <span class="status-tag free">免费</span>
+                    </div>
+                </div>
+
+                <div class="platform-card">
+                    <div class="platform-icon discord">
+                        <i class="fab fa-discord"></i>
+                    </div>
+                    <h3>Discord</h3>
+                    <p>创建 Discord Bot，配置 Token 和 Intents</p>
+                    <div class="platform-status">
+                        <span class="status-tag free">免费</span>
+                    </div>
+                </div>
+
+                <div class="platform-card">
+                    <div class="platform-icon whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h3>WhatsApp</h3>
+                    <p>需要 Meta Business 账号，申请 API</p>
+                    <div class="platform-status">
+                        <span class="status-tag paid">需付费</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="platform-guide">
+                <h3>📖 详细接入教程</h3>
+                <div class="guide-accordion">
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>📱 Telegram 接入教程</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <ol>
+                                <li>打开 Telegram，搜索 @BotFather</li>
+                                <li>发送 <code>/newbot</code> 创建新机器人</li>
+                                <li>按照提示设置机器人名称和用户名</li>
+                                <li>复制 Bot Token（格式：123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11）</li>
+                                <li>在 Clawdbot 后台配置 Bot Token</li>
+                                <li>设置 Webhook 或使用长轮询模式</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>🏢 飞书接入教程</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <ol>
+                                <li>登录飞书开放平台：https://open.feishu.cn/</li>
+                                <li>创建企业应用，填写基本信息</li>
+                                <li>在「凭证与权限」页面申请所需权限</li>
+                                <li>获取 App ID 和 App Secret</li>
+                                <li>在「事件订阅」配置回调 URL</li>
+                                <li>在 Clawdbot 后台配置应用凭证</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>💬 Slack 接入教程</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <ol>
+                                <li>访问 https://api.slack.com/apps 创建新应用</li>
+                                <li>选择「From scratch」创建应用</li>
+                                <li>在「OAuth & Permissions」添加 Bot Token Scopes</li>
+                                <li>安装应用到你的 Workspace</li>
+                                <li>复制 Bot User OAuth Token</li>
+                                <li>在「Event Subscriptions」启用并订阅消息事件</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">常见问题</span>
+                <h2>你可能会问</h2>
+                <p>这些问题我帮你整理好了 👇</p>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Q1: 完全没有技术基础能搭建吗？</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p><strong>A:</strong> 可以的！最简单的方式是用<strong>一键安装脚本</strong>或<strong>Docker</strong>，整个过程大概10-20分钟。如果遇到问题，可以在社区群里提问，大家都很热心。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Q2: 搭建需要多少钱？</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p><strong>A:</strong> 软件本身免费。如果你用云服务器，月均<strong>50-200元</strong>（1-2核配置完全够用）。AI API 调用费用另算，按量付费。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Q3: 数据真的安全吗？</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p><strong>A:</strong> 是的。所有数据默认存在你自己的服务器上，不经过第三方服务器。但要注意：AI 平台的 API 可能会记录你的对话内容（如 OpenAI/Anthropic），介意的可以本地部署模型。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Q4: 微信个人号能用吗？</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p><strong>A:</strong> 个人订阅号<strong>不支持</strong>，需要<strong>企业认证的订阅号或服务号</strong>。如果只是自己用，推荐用 Telegram，体验更好。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Q5: 一个人可以用几个 AI 模型？</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p><strong>A:</strong> 可以同时配置多个模型！Claude、GPT、DeepSeek 通通可以，Clawdbot 会自动路由。不同场景可以用不同模型，性价比更高。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Q6: 搭建后怎么升级新版本？</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p><strong>A:</strong> 
+                        <strong>源码安装：</strong> <code>git pull && pnpm install && pnpm build</code><br>
+                        <strong>Docker：</strong> <code>docker pull clawdbot/clawdbot:latest && docker restart clawdbot</code></p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Q7: 出错了去哪里求助？</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p><strong>A:</strong> 1) 查看项目 README 和文档 2) 搜索 GitHub Issues 3) 加入 Discord/微信群提问 4) 提 Issue 求助。社区很活跃，通常24小时内有人回复。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <i class="fas fa-robot"></i>
+                        <span>Clawdbot</span>
+                    </div>
+                    <p>一个普通博主整理的 Clawdbot 教程<br>帮助更多人一起来玩转 AI 助手 💪</p>
+                    <div class="social-links">
+                        <a href="https://github.com/clawdbot" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://discord.gg/clawd" target="_blank"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>📚 资源</h4>
+                        <ul>
+                            <li><a href="#install">安装教程</a></li>
+                            <li><a href="#platform">平台接入</a></li>
+                            <li><a href="#faq">常见问题</a></li>
+                            <li><a href="https://docs.clawd.bot" target="_blank">官方文档</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>🔗 链接</h4>
+                        <ul>
+                            <li><a href="https://github.com/clawdbot/clawdbot" target="_blank">GitHub</a></li>
+                            <li><a href="https://docs.clawd.bot" target="_blank">官方文档</a></li>
+                            <li><a href="https://discord.gg/clawd" target="_blank">Discord</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>📝 本教程由热心博主整理 | 开源免费 | © 2024-2026</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
