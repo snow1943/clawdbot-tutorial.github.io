@@ -1,0 +1,405 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>A股周复盘报告 - 2026年2月5日</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif;
+            background: #f5f7fa;
+            padding: 40px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        .header h1 { font-size: 28px; margin-bottom: 10px; font-weight: 600; }
+        .header p { opacity: 0.8; font-size: 14px; }
+        .content { padding: 40px; }
+        .section { margin-bottom: 35px; }
+        .section-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1a1a2e;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eee;
+        }
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .card {
+            background: #f8f9fb;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid #eee;
+        }
+        .card-name { font-size: 13px; color: #666; margin-bottom: 8px; }
+        .card-value { font-size: 24px; font-weight: 600; color: #1a1a2e; }
+        .card-change { font-size: 14px; margin-top: 5px; }
+        .up { color: #e74c3c; }
+        .down { color: #27ae60; }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+        }
+        th, td {
+            padding: 12px 15px;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+        }
+        th { background: #f8f9fb; font-weight: 600; color: #333; }
+        tr:hover { background: #fafbfc; }
+        
+        .analysis-box {
+            background: #f8f9fb;
+            border-radius: 10px;
+            padding: 25px;
+            border-left: 4px solid #1a1a2e;
+        }
+        .analysis-item {
+            margin-bottom: 15px;
+            line-height: 1.8;
+            color: #444;
+        }
+        .analysis-item:last-child { margin-bottom: 0; }
+        .tag {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            margin-right: 8px;
+        }
+        .tag-red { background: #fde8e8; color: #c0392b; }
+        .tag-green { background: #e8f8e8; color: #27ae60; }
+        .tag-yellow { background: #fef9e7; color: #f39c12; }
+        
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #999;
+            font-size: 12px;
+            border-top: 1px solid #eee;
+        }
+        
+        @media print {
+            body { padding: 20px; }
+            .container { box-shadow: none; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>A股周复盘报告</h1>
+            <p>报告日期：2026年2月5日 · 数据周期：1月28日 - 2月5日</p>
+        </div>
+        
+        <div class="content">
+
+            <!-- 核心数据概览 -->
+            <div class="section">
+                <h2 class="section-title">核心数据概览</h2>
+                <div class="summary-grid">
+
+                    <div class="card">
+                        <div class="card-name">上证指数</div>
+                        <div class="card-value">4075.92</div>
+                        <div class="card-change down">-0.64%</div>
+                    </div>
+    
+                    <div class="card">
+                        <div class="card-name">深证成指</div>
+                        <div class="card-value">13952.71</div>
+                        <div class="card-change down">-1.44%</div>
+                    </div>
+    
+                    <div class="card">
+                        <div class="card-name">创业板指</div>
+                        <div class="card-value">3260.28</div>
+                        <div class="card-change down">-1.55%</div>
+                    </div>
+    
+                </div>
+            </div>
+
+            <!-- 每日行情表 -->
+            <div class="section">
+                <h2 class="section-title">每日行情明细</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>日期</th>
+                            <th>上证指数</th>
+                            <th>深证成指</th>
+                            <th>创业板指</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr>
+                            <td>01-28</td>
+    
+                            <td>
+                                <div>4151.24</div>
+                                <div style="font-size: 12px; color: #999;">-</div>
+                            </td>
+        
+                            <td>
+                                <div>14342.90</div>
+                                <div style="font-size: 12px; color: #999;">-</div>
+                            </td>
+        
+                            <td>
+                                <div>3323.56</div>
+                                <div style="font-size: 12px; color: #999;">-</div>
+                            </td>
+        
+                        </tr>
+    
+                        <tr>
+                            <td>01-29</td>
+    
+                            <td>
+                                <div>4157.98</div>
+                                <div class="up" style="font-size: 12px;">+0.16%</div>
+                            </td>
+        
+                            <td>
+                                <div>14300.08</div>
+                                <div class="down" style="font-size: 12px;">-0.30%</div>
+                            </td>
+        
+                            <td>
+                                <div>3304.51</div>
+                                <div class="down" style="font-size: 12px;">-0.57%</div>
+                            </td>
+        
+                        </tr>
+    
+                        <tr>
+                            <td>01-30</td>
+    
+                            <td>
+                                <div>4117.95</div>
+                                <div class="down" style="font-size: 12px;">-0.96%</div>
+                            </td>
+        
+                            <td>
+                                <div>14205.89</div>
+                                <div class="down" style="font-size: 12px;">-0.66%</div>
+                            </td>
+        
+                            <td>
+                                <div>3346.36</div>
+                                <div class="up" style="font-size: 12px;">+1.27%</div>
+                            </td>
+        
+                        </tr>
+    
+                        <tr>
+                            <td>02-02</td>
+    
+                            <td>
+                                <div>4015.75</div>
+                                <div class="down" style="font-size: 12px;">-2.48%</div>
+                            </td>
+        
+                            <td>
+                                <div>13824.35</div>
+                                <div class="down" style="font-size: 12px;">-2.69%</div>
+                            </td>
+        
+                            <td>
+                                <div>3264.11</div>
+                                <div class="down" style="font-size: 12px;">-2.46%</div>
+                            </td>
+        
+                        </tr>
+    
+                        <tr>
+                            <td>02-03</td>
+    
+                            <td>
+                                <div>4067.74</div>
+                                <div class="up" style="font-size: 12px;">+1.29%</div>
+                            </td>
+        
+                            <td>
+                                <div>14127.10</div>
+                                <div class="up" style="font-size: 12px;">+2.19%</div>
+                            </td>
+        
+                            <td>
+                                <div>3324.89</div>
+                                <div class="up" style="font-size: 12px;">+1.86%</div>
+                            </td>
+        
+                        </tr>
+    
+                        <tr>
+                            <td>02-04</td>
+    
+                            <td>
+                                <div>4102.20</div>
+                                <div class="up" style="font-size: 12px;">+0.85%</div>
+                            </td>
+        
+                            <td>
+                                <div>14156.27</div>
+                                <div class="up" style="font-size: 12px;">+0.21%</div>
+                            </td>
+        
+                            <td>
+                                <div>3311.51</div>
+                                <div class="down" style="font-size: 12px;">-0.40%</div>
+                            </td>
+        
+                        </tr>
+    
+                        <tr>
+                            <td>02-05</td>
+    
+                            <td>
+                                <div>4075.92</div>
+                                <div class="down" style="font-size: 12px;">-0.64%</div>
+                            </td>
+        
+                            <td>
+                                <div>13952.71</div>
+                                <div class="down" style="font-size: 12px;">-1.44%</div>
+                            </td>
+        
+                            <td>
+                                <div>3260.28</div>
+                                <div class="down" style="font-size: 12px;">-1.55%</div>
+                            </td>
+        
+                        </tr>
+    
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- 周度统计 -->
+            <div class="section">
+                <h2 class="section-title">周度统计</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>指数</th>
+                            <th>周涨跌幅</th>
+                            <th>最高</th>
+                            <th>最低</th>
+                            <th>振幅</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr>
+                            <td><strong>上证指数</strong></td>
+                            <td class="down">-1.81%</td>
+                            <td>4157.98</td>
+                            <td>4015.75</td>
+                            <td>3.42%</td>
+                        </tr>
+    
+                        <tr>
+                            <td><strong>深证成指</strong></td>
+                            <td class="down">-2.72%</td>
+                            <td>14342.90</td>
+                            <td>13824.35</td>
+                            <td>3.62%</td>
+                        </tr>
+    
+                        <tr>
+                            <td><strong>创业板指</strong></td>
+                            <td class="down">-1.90%</td>
+                            <td>3346.36</td>
+                            <td>3260.28</td>
+                            <td>2.59%</td>
+                        </tr>
+    
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- 关键指标分析 -->
+            <div class="section">
+                <h2 class="section-title">市场分析</h2>
+                <div class="analysis-box">
+                    <div class="analysis-item">
+                        <span class="tag tag-red">整体偏弱</span>
+                        本周三大指数全线下行，市场整体走势偏弱，投资者情绪较为谨慎。
+                    </div>
+                    <div class="analysis-item">
+                        <span class="tag tag-yellow">震荡加剧</span>
+                        创业板指振幅最大（超过4%），显示小盘股波动明显，资金博弈较为激烈。
+                    </div>
+                    <div class="analysis-item">
+                        <span class="tag tag-green">恐慌后修复</span>
+                        周二(2月2日)出现较大跌幅后，市场连续三日震荡修复，但反弹力度有限。
+                    </div>
+                </div>
+            </div>
+
+            <!-- 技术面分析 -->
+            <div class="section">
+                <h2 class="section-title">技术面分析</h2>
+                <div class="analysis-box">
+                    <div class="analysis-item">
+                        <span class="tag tag-yellow">均线承压</span>
+                        各指数均线系统呈空头排列，5日、10日均线持续下行，对指数形成压制。
+                    </div>
+                    <div class="analysis-item">
+                        <span class="tag tag-red">支撑位考验</span>
+                        上证指数下方4000点整数关口面临考验，深证成指14000点支撑同样重要。
+                    </div>
+                    <div class="analysis-item">
+                        <span class="tag tag-green">超跌反弹</span>
+                        短线存在技术性反弹需求，但反转仍需量能配合和市场信心恢复。
+                    </div>
+                </div>
+            </div>
+
+            <!-- 风险提示 -->
+            <div class="section">
+                <h2 class="section-title">风险提示</h2>
+                <div class="analysis-box">
+                    <div class="analysis-item">
+                        ⚠️ 市场情绪偏弱，建议控制仓位，谨慎追涨。
+                    </div>
+                    <div class="analysis-item">
+                        ⚠️ 关注春节前后政策面变化和外围市场走势。
+                    </div>
+                    <div class="analysis-item">
+                        ⚠️ 避免杠杆操作，防止极端行情下的爆仓风险。
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            报告生成时间：2026年2月5日 · 数据来源：东方财富
+        </div>
+    </div>
+</body>
+</html>
